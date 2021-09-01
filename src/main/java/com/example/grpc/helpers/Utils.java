@@ -31,10 +31,9 @@ public abstract class Utils {
       if (portNumber > RANGE_START_PORT && portNumber < RANGE_END_PORT) {
         return portNumber;
       }
-
-      logger.info("invalid port, the port {} has been selected\n\n", DEFAULT_PORT);
     }
 
+    logger.info("invalid port, the port {} has been selected", DEFAULT_PORT);
     return DEFAULT_PORT;
   }
 
