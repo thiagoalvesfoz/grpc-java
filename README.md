@@ -33,15 +33,15 @@ Suas principais características que a tornam tão poderosa é a capacidade de c
 Execute este comandos no terminal:
 ```bash
 docker build -t grpc-java .
-docker run --rm --name serve -p 8080:50051 grpc-java -serve
-docker run --rm --name client grpc-java -client -host=<IP-LOCAL> -port=8080
+docker run --rm --name serve -p 8080:50051 grpc-java -S
+docker run --rm --name client grpc-java -C --host=<IP-LOCAL> --port=8080 --firstName="Petter" --lastName="Quill"
 ```
 
 Você pode querer criar um link entre os containers para se comunicarem sem necessáriamente expor a porta, exemplo:
 ```bash
 docker network create grpc
-docker run --rm --network=grpc --name=serve grpc-java -serve -port=50080
-docker run --rm --network=grpc --name=client grpc-java -client -host=serve -port=50080 -firstName=docker -lastName=test
+docker run --rm --network=grpc --name=serve grpc-java -S --port=50080
+docker run --rm --network=grpc --name=client grpc-java -C --host=serve --port=50080 -fn="Linus" -ln="Torvalds"
 ```
 
 ### Adicional
@@ -67,14 +67,14 @@ mvn clean package
 Executar no modo servidor
 
 ```bash
-java -jar ./target/grpc-java-jar-with-dependencies.jar -serve
+java -jar ./target/grpc-java-jar-with-dependencies.jar -S
 ```
 
 ## Passo 3
 Executar no modo client
 
 ```bash
-java -jar ./target/grpc-java-jar-with-dependencies.jar -client
+java -jar ./target/grpc-java-jar-with-dependencies.jar -C
 ```
 
 
