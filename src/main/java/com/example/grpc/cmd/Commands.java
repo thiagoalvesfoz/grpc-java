@@ -20,7 +20,7 @@ public abstract class Commands {
             .append(" ")
             .append(SERVE_MODE)
             .append("\t\t\t")
-            .append("run serve mode")
+            .append("Run serve mode")
             .append("\n")
             .toString();
   }
@@ -30,7 +30,7 @@ public abstract class Commands {
             .append(" ")
             .append(CLIENT_MODE)
             .append("\t\t")
-            .append("run client mode")
+            .append("Run client mode")
             .append("\n")
             .toString();
   }
@@ -41,7 +41,7 @@ public abstract class Commands {
             .append(PORT)
             .append("<NUMBER>")
             .append("\t\t")
-            .append("specify a port in the range ")
+            .append("Specify a port in the range ")
             .append(RANGE_START_PORT + " - " + RANGE_END_PORT + ". ")
             .append("Default is " + DEFAULT_PORT)
             .append("\n")
@@ -54,7 +54,7 @@ public abstract class Commands {
             .append(HOSTNAME)
             .append("<HOST>")
             .append("\t\t")
-            .append("specify a hostname or IP to connect. ")
+            .append("Specify a hostname or IP to connect. ")
             .append("Default is " + DEFAULT_HOST)
             .append("\n")
             .toString();
@@ -65,7 +65,7 @@ public abstract class Commands {
             .append(" ")
             .append(HELP)
             .append("\t\t\t")
-            .append("show help commands")
+            .append("Show help commands")
             .append("\n")
             .toString();
   }
@@ -76,7 +76,7 @@ public abstract class Commands {
             .append(FIRST_NAME)
             .append("<FOO>")
             .append("\t")
-            .append("override firstname message")
+            .append("Override firstname message")
             .append("\n")
             .toString();
   }
@@ -87,7 +87,7 @@ public abstract class Commands {
             .append(LAST_NAME)
             .append("<BAR>")
             .append("\t")
-            .append("override lastname message")
+            .append("Override lastname message")
             .append("\n")
             .toString();
   }
