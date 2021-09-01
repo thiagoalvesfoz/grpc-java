@@ -24,9 +24,9 @@ public abstract class Utils {
 
     String port = Arrays.stream(args).filter(c -> c.startsWith(PORT)).collect(Collectors.joining());
 
-    if (!port.isBlank() && isInteger(port.substring(6))) {
+    if (!port.isBlank() && isInteger(port.substring(PORT.length()))) {
 
-      int portNumber = Integer.parseInt(port.substring(6));
+      int portNumber = Integer.parseInt(port.substring(PORT.length()));
 
       if (portNumber > RANGE_START_PORT && portNumber < RANGE_END_PORT) {
         return portNumber;
@@ -52,7 +52,7 @@ public abstract class Utils {
 
     if (!hostname.isBlank()) {
 
-      hostname = hostname.substring(6);
+      hostname = hostname.substring(HOSTNAME.length());
 
       if (hostname.isBlank())
         throw new InvalidCommandException("The host must be not blank, Please insert a host or remove the flag");

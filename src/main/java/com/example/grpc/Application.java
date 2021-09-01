@@ -25,7 +25,7 @@ public class Application {
       logger.warn(e.getMessage());
       CmdInterface.showInstructions();
     } catch (GrpcApplicationException e) {
-      logger.warn(e.getMessage());
+      logger.error(e.getMessage());
     }
   }
 

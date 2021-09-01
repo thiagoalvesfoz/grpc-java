@@ -23,6 +23,9 @@ public class GrpcClient {
 
     HelloServiceGrpc.HelloServiceBlockingStub stub = HelloServiceGrpc.newBlockingStub(channel);
 
+    logger.info("Connected. Server info: tcp/{}:{}", HOSTNAME, PORT_NUMBER);
+    logger.info("Message sent to server");
+
     HelloResponse helloResponse = stub.hello(
             HelloRequest.newBuilder()
                     .setFirstName(firstName)
@@ -30,7 +33,8 @@ public class GrpcClient {
                     .build()
     );
 
-    logger.info("New response - {}", helloResponse.getGreeting());
+    logger.info("Message reply received - {}", helloResponse.getGreeting());
     channel.shutdown();
+    logger.info("Closed connection");
   }
 }
