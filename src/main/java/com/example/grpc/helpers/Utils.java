@@ -1,6 +1,6 @@
 package com.example.grpc.helpers;
 
-import com.example.grpc.cmd.InvalidCommandException;
+import com.example.grpc.exceptions.InvalidCommandException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

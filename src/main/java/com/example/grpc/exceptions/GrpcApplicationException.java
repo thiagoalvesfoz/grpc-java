@@ -1,4 +1,4 @@
-package com.example.grpc;
+package com.example.grpc.exceptions;
 
 public class GrpcApplicationException extends Exception {
 
