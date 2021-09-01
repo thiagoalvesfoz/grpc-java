@@ -3,7 +3,7 @@
 ---
 ## Porque utilizar gRPC
 
-O gRPC é uma tecnologia de código aberto e alto de desempenho criado pela Google em 2015 com o objetivo de trafegar o mínimo possível de dados na rede. 
+O gRPC é uma tecnologia de código aberto e de alto de desempenho criado pela Google em 2015 com o objetivo de trafegar o mínimo possível de dados na rede. 
 Suas principais características que a tornam tão poderosa é a capacidade de comunicação entre diversos sistemas através da rede utilizando o HTTP/2 e protocol buffers.
 
 ### Os principais benefícios do gRPC são:
@@ -12,11 +12,11 @@ Suas principais características que a tornam tão poderosa é a capacidade de c
 - Desenvolvimento de API Contract-first, usando Protocol Buffers por padrão.
 - Tem suporte a várias linguagens de programação.
 - Opera de forma síncrona e assíncrona.
-- Suporta chamadas streaming client, streaming server e streaming bidirecionais.
+- Suporta streaming no lado client, streaming no lado server e streaming bidirecionais.
 - Redução do uso de rede através da serialização do Protobuf.
-- Pode ser até 6 vezes mais rápido se comparado com JSON
-- Muito recomenado para ambientes com arquitetura em microsserviços
-- Recomendado para serviços real-time de ponta a ponta.
+- Pode ser até 6 vezes mais rápido se comparado com JSON.
+- Perfeito para comunicação em ambientes com arquitetura em microsserviços.
+- Muito recomendado para serviços real-time de ponta a ponta.
 
 ---
 
@@ -81,4 +81,5 @@ java -jar ./target/grpc-java-jar-with-dependencies.jar -client
 ## Links importantes
 - Página oficial gRPC: [clique aqui](https://grpc.io/)
 - Design Principles: [clique aqui](https://grpc.io/blog/principles/)
-- Compilando código gRPC baseando em java: [Clique aqui](https://github.com/grpc/grpc-java)
+- Introduction to  gRPC with Java: [clique aqui](https://www.baeldung.com/grpc-introduction)
+- gRPC-Java - An RPC library and framework: [Clique aqui](https://github.com/grpc/grpc-java)
