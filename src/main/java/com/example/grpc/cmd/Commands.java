@@ -43,7 +43,7 @@ public abstract class Commands {
             .append("\t\t")
             .append("specify a port in the range ")
             .append(RANGE_START_PORT + " - " + RANGE_END_PORT + ". ")
-            .append("Default port is " + DEFAULT_PORT)
+            .append("Default is " + DEFAULT_PORT)
             .append("\n")
             .toString();
   }
@@ -54,8 +54,8 @@ public abstract class Commands {
             .append(HOSTNAME)
             .append("<HOST>")
             .append("\t\t")
-            .append("specify a host or IP to connect. ")
-            .append("Default host is " + DEFAULT_HOST)
+            .append("specify a hostname or IP to connect. ")
+            .append("Default is " + DEFAULT_HOST)
             .append("\n")
             .toString();
   }
