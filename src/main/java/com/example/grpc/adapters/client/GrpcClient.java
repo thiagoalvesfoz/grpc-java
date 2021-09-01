@@ -9,18 +9,15 @@ import io.grpc.ManagedChannelBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.example.grpc.helpers.Utils.DEFAULT_HOST;
-
 public class GrpcClient {
   private static final Logger logger = LoggerFactory.getLogger(CmdInterface.class);
 
-  public static void run(int PORT_NUMBER, String firstName, String lastName) {
-    logger.info("Client started. Connecting to server...\n");
+  public static void run(String HOSTNAME, int PORT_NUMBER, String firstName, String lastName) {
 
     firstName = !firstName.isBlank() ? firstName : "Foo";
     lastName = !lastName.isBlank() ? lastName : "Bar";
 
-    ManagedChannel channel = ManagedChannelBuilder.forAddress(DEFAULT_HOST, PORT_NUMBER)
+    ManagedChannel channel = ManagedChannelBuilder.forAddress(HOSTNAME, PORT_NUMBER)
             .usePlaintext()
             .build();
 

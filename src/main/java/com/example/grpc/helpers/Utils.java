@@ -1,11 +1,13 @@
 package com.example.grpc.helpers;
 
+import com.example.grpc.cmd.InvalidCommandException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+import static com.example.grpc.cmd.Commands.HOSTNAME;
 import static com.example.grpc.cmd.Commands.PORT;
 
 public abstract class Utils {
@@ -15,7 +17,7 @@ public abstract class Utils {
   /* TCP CONNECTIONS */
   public static final String DEFAULT_HOST = "localhost";
   public static final int DEFAULT_PORT = 50051;
-  public static final int RANGE_START_PORT = 49152;
+  public static final int RANGE_START_PORT = 20;
   public static final int RANGE_END_PORT = 99999;
 
   public static Integer getPortNumber(String... args) {
@@ -43,6 +45,22 @@ public abstract class Utils {
     } catch (Exception e) {
       return false;
     }
+  }
+
+  public static String getHostname(String ...args) throws InvalidCommandException {
+    String hostname = Arrays.stream(args).filter(c -> c.startsWith(HOSTNAME)).collect(Collectors.joining());
+
+    if (!hostname.isBlank()) {
+
+      hostname = hostname.substring(6);
+
+      if (hostname.isBlank())
+        throw new InvalidCommandException("The host must be not blank, Please insert a host or remove the flag");
+
+      return hostname;
+    }
+
+    return DEFAULT_HOST;
   }
 
 }

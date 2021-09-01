@@ -6,7 +6,7 @@ import com.example.grpc.cmd.CmdInterface;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.example.grpc.helpers.Utils.getPortNumber;
+import static com.example.grpc.helpers.Utils.*;
 
 public class Application {
 
@@ -14,7 +14,13 @@ public class Application {
 
   public static void main(String[] args) {
     try {
-      CmdInterface.initialize(getPortNumber(args), args);
+
+      CmdInterface.initialize(
+              getHostname(args),
+              getPortNumber(args),
+              args
+      );
+
     } catch (InvalidCommandException e) {
       logger.warn(e.getMessage());
       CmdInterface.showInstructions();

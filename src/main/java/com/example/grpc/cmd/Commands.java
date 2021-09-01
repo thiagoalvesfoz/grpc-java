@@ -11,6 +11,7 @@ public abstract class Commands {
   public static final String CLIENT_MODE  = PREFIX + "client";
   public static final String FIRST_NAME   = PREFIX + "firstName=";
   public static final String LAST_NAME    = PREFIX + "lastName=";
+  public static final String HOSTNAME     = PREFIX + "host=";
   public static final String PORT         = PREFIX + "port=";
   public static final String HELP         = PREFIX + "help";
 
@@ -43,6 +44,18 @@ public abstract class Commands {
             .append("specify a port in the range ")
             .append(RANGE_START_PORT + " - " + RANGE_END_PORT + ". ")
             .append("Default port is " + DEFAULT_PORT)
+            .append("\n")
+            .toString();
+  }
+
+  public static String getHost() {
+    return new StringBuilder()
+            .append(" ")
+            .append(HOSTNAME)
+            .append("<HOST>")
+            .append("\t\t")
+            .append("specify a host or IP to connect. ")
+            .append("Default host is " + DEFAULT_HOST)
             .append("\n")
             .toString();
   }
