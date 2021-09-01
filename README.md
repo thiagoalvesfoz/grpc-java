@@ -81,5 +81,6 @@ java -jar ./target/grpc-java-jar-with-dependencies.jar -C
 ## Links importantes
 - Página oficial gRPC: [clique aqui](https://grpc.io/)
 - Design Principles: [clique aqui](https://grpc.io/blog/principles/)
+- gRPC Benchmark Test on Google Cloud: [clique aqui](https://cloud.google.com/blog/products/gcp/announcing-grpc-alpha-for-google-cloud-pubsub)
 - Introduction to  gRPC with Java: [clique aqui](https://www.baeldung.com/grpc-introduction)
 - gRPC-Java - An RPC library and framework: [Clique aqui](https://github.com/grpc/grpc-java)
