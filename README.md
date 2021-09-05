@@ -84,3 +84,4 @@ java -jar ./target/grpc-java-jar-with-dependencies.jar -C
 - gRPC Benchmark Test on Google Cloud: [clique aqui](https://cloud.google.com/blog/products/gcp/announcing-grpc-alpha-for-google-cloud-pubsub)
 - Introduction to  gRPC with Java: [clique aqui](https://www.baeldung.com/grpc-introduction)
 - gRPC-Java - An RPC library and framework: [Clique aqui](https://github.com/grpc/grpc-java)
+- BloomRPC - Ferramenta para testar serviços GRPC [Clique aqui](https://github.com/uw-labs/bloomrpc)
